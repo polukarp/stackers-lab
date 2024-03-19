@@ -8,6 +8,12 @@ import {
   CardTitle,
 } from "./components/ui/card";
 import mockData from "./mock.json";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "./components/ui/accordion";
 
 export const App: React.FC = () => {
   const [data, setData] = useState<MockData | null>(null);
@@ -22,7 +28,7 @@ export const App: React.FC = () => {
   return (
     <div className="flex flex-col justify-center w-screen items-center gap-4 p-2 lg:p-8">
       {data.albums.map((album) => (
-        <Album data={album} />
+        <Album key={album.id} data={album} />
       ))}
     </div>
   );
@@ -36,20 +42,38 @@ const Album: React.FC<{ data: Album }> = ({ data }) => {
       <CardHeader>
         <CardTitle>{title}</CardTitle>
         <CardDescription className="flex justify-between">
-          <div>{artist}</div>
-          <div>{genre}</div>
+          <span>{artist}</span>
+          <span>{genre}</span>
         </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col lg:flex-row ">
         <div className="lg:flex-1">
           <img src={thumbnail} className="rounded-sm" />
         </div>
-        <div className="flex flex-col gap-2 items-center justify-center lg:flex-1">
-          <div className="flex flex-col gap-2 lg:px-4 pt-3 w-full">
-            {tracks.map(({ title, duration }) => (
-              <Track title={title} duration={duration} />
-            ))}
-          </div>
+        <div className="flex flex-col gap-2 lg:flex-1">
+          <Accordion type="single" collapsible className="px-4">
+            <AccordionItem value="tracklist">
+              <AccordionTrigger>TrackList</AccordionTrigger>
+              <AccordionContent>
+                <div className="flex flex-col gap-2 lg:px-4 pt-3 w-full">
+                  {tracks.map(({ title, duration, track_number }) => (
+                    <Track
+                      key={track_number}
+                      title={title}
+                      duration={duration}
+                    />
+                  ))}
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="description">
+              <AccordionTrigger>Description</AccordionTrigger>
+              <AccordionContent>
+                Lorem ipsum dolor sit amet, qui minim labore adipisicing minim
+                sint cillum sint consectetur cupidatat.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </CardContent>
     </Card>
