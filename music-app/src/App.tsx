@@ -1,6 +1,5 @@
-import { useEffect, useMemo, useState } from "react";
-import mockData from "./mock.json";
-import type { Album, Track, MockData } from "@/shared";
+import type { Album, MockData, Track } from "@/shared";
+import { useMemo, useState } from "react";
 import {
   Card,
   CardContent,
@@ -8,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "./components/ui/card";
+import mockData from "./mock.json";
 
 export const App: React.FC = () => {
   const [data, setData] = useState<MockData | null>(null);
