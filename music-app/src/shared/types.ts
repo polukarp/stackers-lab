@@ -7,6 +7,7 @@ export type Album = {
   title: string;
   artist: string;
   genre: string;
+  thumbnail: string;
   release_year: number;
   tracks: Track[];
 };

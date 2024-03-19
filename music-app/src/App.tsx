@@ -7,7 +7,7 @@ export const App: React.FC = () => {
 
   useEffect(() => {
     if (mockData) {
-      setData(mockData);
+      setData(mockData as MockData);
     }
   }, [mockData]);
 
