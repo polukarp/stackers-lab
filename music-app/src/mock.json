@@ -1,0 +1,67 @@
+{
+  "albums": [
+    {
+      "id": 1,
+      "title": "The Cosmic Journey",
+      "artist": "Star Gazer",
+      "release_year": 2023,
+      "genre": "Ambient",
+      "tracks": [
+        { "track_number": 1, "title": "Lunar Awakening", "duration": "5:12" },
+        {
+          "track_number": 2,
+          "title": "Orbiting the Unknown",
+          "duration": "7:45"
+        },
+        { "track_number": 3, "title": "Celestial Voyage", "duration": "6:30" },
+        { "track_number": 4, "title": "Galactic Dreams", "duration": "5:50" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Rhythms of Earth",
+      "artist": "Nature's Beat",
+      "release_year": 2021,
+      "genre": "World Music",
+      "tracks": [
+        { "track_number": 1, "title": "Forest Whisper", "duration": "4:10" },
+        { "track_number": 2, "title": "Mountain Echo", "duration": "5:20" },
+        { "track_number": 3, "title": "Ocean's Pulse", "duration": "6:00" },
+        { "track_number": 4, "title": "Desert Mirage", "duration": "5:35" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Urban Echoes",
+      "artist": "City Lights",
+      "release_year": 2022,
+      "genre": "Electronic",
+      "tracks": [
+        { "track_number": 1, "title": "Neon Dreams", "duration": "4:50" },
+        { "track_number": 2, "title": "Rooftop Memories", "duration": "3:40" },
+        { "track_number": 3, "title": "Midnight Drive", "duration": "5:15" },
+        { "track_number": 4, "title": "Concrete Jungle", "duration": "4:25" },
+        { "track_number": 5, "title": "After Hours", "duration": "6:00" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Echoes of the Past",
+      "artist": "History's Melody",
+      "release_year": 2020,
+      "genre": "Classical",
+      "tracks": [
+        { "track_number": 1, "title": "Ancient Times", "duration": "7:10" },
+        { "track_number": 2, "title": "Medieval Dance", "duration": "5:20" },
+        {
+          "track_number": 3,
+          "title": "Renaissance Reflection",
+          "duration": "6:45"
+        },
+        { "track_number": 4, "title": "Baroque Elegance", "duration": "4:50" },
+        { "track_number": 5, "title": "Romantic Waves", "duration": "8:05" },
+        { "track_number": 6, "title": "Modern Echoes", "duration": "5:55" }
+      ]
+    }
+  ]
+}
